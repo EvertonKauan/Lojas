@@ -8,7 +8,6 @@ public class Client {
 		
 	}
 
-	
 	public Client(String nameCliente, String clientCity) {
 		super();
 		this.nameCliente = nameCliente;

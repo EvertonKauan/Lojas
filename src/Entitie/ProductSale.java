@@ -5,25 +5,15 @@ public class ProductSale {
 	private Provider prov;
 	private Client cliente;
 	
-	public Integer priceSale;
+	private Double priceSale;
 	
-	public ProductSale() {
-		
-	}
-
+	public ProductSale(double purchPrice, String nameProduct, String providerName, String nameCliente) {}
 	
-	public ProductSale(Integer priceSale) {
-		super();
-		this.priceSale = priceSale;
-	}
-
-	public ProductSale(ProductPurchase prodPurch, Provider prov, Client cliente, Integer priceSale) {
-		super();
-		this.prodPurch = prodPurch;
-		this.prov = prov;
-		this.cliente = cliente;
-		this.priceSale = priceSale;
-	}
+	//public ProductSale(ProductPurchase prodPurch, Provider providerName, Client nameCliente) {
+		//this.prodPurch = prodPurch;
+		//this.prov = providerName;
+		//this.cliente = nameCliente;
+	//}
 
 	public ProductPurchase getProdPurch() {
 		return prodPurch;
@@ -49,15 +39,25 @@ public class ProductSale {
 		this.cliente = cliente;
 	}
 
-	public Integer getPriceSale() {
+	public Double getPriceSale(double purchPrice) {
+		priceSale = purchPrice * 2;
 		return priceSale;
 	}
 
-	public void setPriceSale(Integer priceSale) {
+	public void setPriceSale(Double priceSale) {
 		this.priceSale = priceSale;
 	}
 	
 	
+	public String tooString() {
+		return "__Finally__"
+				+ "Name product: " + prodPurch
+				+ "Supplier: " + prov
+				+ "Name client: " + cliente
+				+ "Price sale: " + String.format("%.2f", priceSale);
+		//return "Lucro: R$" + String.format("%.2f", lucro(prodPurch, priceSale));
+	}
 	
-	
+
+
 }

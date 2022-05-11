@@ -1,13 +1,12 @@
 package Entitie;
 
-public class ProductPurchase extends Provider {
+public class ProductPurchase {
 
 	public String nameProduct;
 	public double purchasePrice;
 	public Integer purchaseQuantity;
 	
-	public ProductPurchase(String nameProduct, double purchasePrice, Integer purchaseQuantity, String providerName) {
-		super(providerName);
+	public ProductPurchase(String nameProduct, double purchasePrice, Integer purchaseQuantity) {
 		this.nameProduct = nameProduct;
 		this.purchasePrice = purchasePrice;
 		this.purchaseQuantity = purchaseQuantity;
